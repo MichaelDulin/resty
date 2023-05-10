@@ -179,7 +179,7 @@ Attempt Testing!
 - Import `{ fireEvent, render, screen }` from the React Testing Library to confirm behavior when change and/or click events occur.  See [Documentation](https://testing-library.com/docs/react-testing-library/cheatsheet) as necessary. Examples will soon be given in lecture. 
 
 ## UML - Lab 26
--UML GOES HERE
+<img width="450" alt="lab26uml" src="https://github.com/MichaelDulin/resty/assets/73040864/6aae0410-52ca-4c91-8771-45baf6f550fe">
 
 ****
 
@@ -252,7 +252,7 @@ Suggested Component Hierarchy and Application Architecture:
   - Renders the Result Body as "pretty" JSON.
 
 ## UML - Lab 27
--UML GOES HERE
+<img width="421" alt="lab27uml" src="https://github.com/MichaelDulin/resty/assets/73040864/89084ce0-77b7-435a-869f-7d2e79913ff6">
 
 ****
 
