@@ -179,7 +179,7 @@ Attempt Testing!
 - Import `{ fireEvent, render, screen }` from the React Testing Library to confirm behavior when change and/or click events occur.  See [Documentation](https://testing-library.com/docs/react-testing-library/cheatsheet) as necessary. Examples will soon be given in lecture. 
 
 ## UML - Lab 26
-<img width="450" alt="lab26uml" src="https://github.com/MichaelDulin/resty/assets/73040864/b6194a22-f5a9-4113-bf84-1a258c5676a2">
+<img width="450" alt="lab26uml" src="https://github.com/MichaelDulin/resty/assets/73040864/6aae0410-52ca-4c91-8771-45baf6f550fe">
 
 ****
 
