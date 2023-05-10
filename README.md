@@ -252,7 +252,7 @@ Suggested Component Hierarchy and Application Architecture:
   - Renders the Result Body as "pretty" JSON.
 
 ## UML - Lab 27
--UML GOES HERE
+<img width="421" alt="lab27uml" src="https://github.com/MichaelDulin/resty/assets/73040864/89084ce0-77b7-435a-869f-7d2e79913ff6">
 
 ****
 
