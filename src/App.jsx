@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import React from 'react';
+
 import './App.scss';
 
 // Let's talk about using index.js and some other name in the component folder.
@@ -25,8 +26,8 @@ class App extends React.Component {
     const data = {
       count: 2,
       results: [
-        {name: 'fake thing 1', url: 'http://fakethings.com/1'},
-        {name: 'fake thing 2', url: 'http://fakethings.com/2'},
+        {name: 'fake thing 1a', url: 'http://fakethings.com/1'},
+        {name: 'fake thing 2d', url: 'http://fakethings.com/2'},
       ],
     };
     this.setState({data, requestParams});
