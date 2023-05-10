@@ -311,6 +311,6 @@ Suggested approach:
 Note: update your `<Results />` component to use a 3rd party component to "pretty print" the JSON in a color-coded, user-friendly format.
 
 ## UML - Lab 28
--UML GOES HERE
+<img width="506" alt="lab28uml" src="https://github.com/MichaelDulin/resty/assets/73040864/84b507da-8c5f-413a-aee3-b3c814dfad52">
 
 ****
