@@ -1,5 +1,4 @@
-import React from 'react';
-
+import { useState } from 'react';
 import './App.scss';
 
 // Let's talk about using index.js and some other name in the component folder.
