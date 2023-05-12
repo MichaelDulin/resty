@@ -1,38 +1,64 @@
-import React from 'react';
+import { useState } from 'react';
 import './Form.scss';
 
 import './Form.scss';
 
-class Form extends React.Component {
+function Form({handleApiCall}) {
 
-  handleSubmit = e => {
+  const [url, setUrl] = useState(null);
+  const [method, setMethod] = useState('get');
+  const [json, setJson] = useState(null);
+
+  let handleSubmit = e => {
     e.preventDefault();
+    console.log(e.target);
     const formData = {
-      method:'GET',
-      url: 'https://pokeapi.co/api/v2/pokemon',
+      method: method,
+      url: url,
+      json: JSON.stringify(json),
     };
-    this.props.handleApiCall(formData);
+    handleApiCall(formData);
   }
 
-  render() {
-    return (
-      <>
-        <form onSubmit={this.handleSubmit}>
-          <label >
-            <span>URL: </span>
-            <input name='url' type='text' />
-            <button type="submit">GO!</button>
-          </label>
-          <label className="methods">
-            <span id="get">GET</span>
-            <span id="post">POST</span>
-            <span id="put">PUT</span>
-            <span id="delete">DELETE</span>
-          </label>
-        </form>
-      </>
-    );
+  const handleInput = (event) => {
+    let name = event.target.name;
+    let value = event.target.value;
+    if (name === 'url') {
+      setUrl(value);
+    }
+    if (name === 'methods') {
+      setMethod(value);
+    }
   }
+  const handleJson = (e) => {
+    setJson(e.target.value);
+  }
+
+
+  return (
+    <>
+
+      <form onSubmit={handleSubmit}>
+        <label >
+          <span>URL: </span>
+          <input data-testid="url-input" name="url" type='text' placeholder="URL goes here" onChange={handleInput} />
+          <button type="submit">GO!</button>
+        </label>
+        <select data-testid="HTMLmethods" name="methods" onChange={handleInput}>
+          <option value="get">GET</option>
+          <option value="post">POST</option>
+          <option value="put">PUT</option>
+          <option value="delete">DELETE</option>
+        </select>
+        {(method === 'put' || method === 'post') 
+        && 
+        <textarea id="jsonBox" name="jsonBox" rows="10" cols="50" placeholder='type in a JSON object' onChange={handleJson}>
+        </textarea>
+        }
+
+      </form>
+    </>
+  );
 }
 
 export default Form;

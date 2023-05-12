@@ -1,10 +1,7 @@
-import React from 'react';
 import './Footer.scss';
 
-class Footer extends React.Component {
-  render() {
+function Footer() {
     return <footer>Michael Dulin&copy; 2023</footer>;
-  }
 }
 
 export default Footer;
