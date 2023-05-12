@@ -1,10 +1,10 @@
-import React from 'react';
 import './Results.scss';
+import JsonView from 'react18-json-view';
 
-function Results (props){
+function Results ({data}){
   return (
     <section>
-      <pre>{props.data ? JSON.stringify(props.data, undefined, 2) : null}</pre>
+      <pre data-testid="results"><JsonView src={data} /></pre>
     </section>
   );
 }
