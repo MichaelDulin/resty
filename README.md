@@ -314,3 +314,59 @@ Note: update your `<Results />` component to use a 3rd party component to "prett
 <img width="506" alt="lab28uml" src="https://github.com/MichaelDulin/resty/assets/73040864/84b507da-8c5f-413a-aee3-b3c814dfad52">
 
 ****
+
+# Day 4 - LAB 29 - Advanced State with Reducers
+
+**RESTy Phase 4:** Track History.
+
+## Before you begin
+
+Refer to *Getting Started*  in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for complete setup, configuration, deployment, and submission instructions.
+
+> Continue working in your 'resty' repository, in a branch called 'reducer-hook'.
+
+## Business Requirements
+
+Refer to the [RESTy System Overview](../../apps-and-libraries/resty/README.md) for a complete review of the application, including Business and Technical requirements along with the development roadmap.
+
+## Phase 4 Requirements
+
+In phase 4, we will be tracking every API call and storing it in history. 
+
+The following user stories detail the major functionality for this phase of the project.
+
+- As a user, I want to see a list of my previous API calls, so that I can see the results again, quickly.
+
+Application Flow:
+
+- User enters an API URL.
+- Chooses a REST Method.
+- Clicks the  "Go" button.
+- Application fetches data from the URL given, with the method specified.
+- Application stores the API request and returned data into state.
+  - Updates the list of previous API calls.
+- Application Displays the response headers and results separately.
+  - Both headers and results should be "pretty printed" JSON.
+
+> One possible design/layout. Please use your judgement and taste in styling your version of this application.
+
+![Resty](resty.png)
+
+## Technical Requirements / Note
+
+> Refactor your state management within the App component to use the `useReducer()` hook.
+
+1. Replace any component state managements to use derived state from `useReducer()` with a reducer function and initial state.
+
+Suggested approach:
+
+- `<App />`: Use a reducer to store and manage all application state: loading, results, history.
+  - Add to history array in state after every api call
+    - method, url, results (json).
+- `<History />`: Iterates the history array in state and shows the previous API calls.
+  - When one is clicked on, show the results in the results component.
+    - Note: the results component renders whatever is in state.
+
+
+## UML - Lab 29
+<img width="506" alt="lab28uml" src="https://github.com/MichaelDulin/resty/assets/73040864/84b507da-8c5f-413a-aee3-b3c814dfad52">
